@@ -1,0 +1,11 @@
+FROM mhart/alpine-node:9
+
+WORKDIR /var/server
+
+COPY . /var/server
+
+RUN yarn global add nodemon
+
+RUN yarn
+
+CMD ["yarn", "start"]

@@ -1,0 +1,23 @@
+ version: "3"
+ services: 
+  react_app:
+    container_name: "docker-intro-demo"
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    ports: 
+      - 3000:3000
+    # links:
+    #   - postgres_server
+  # Sample postgres image, would need a dbdump to work
+  # postgres_server:
+  #   restart: always
+  #   image: sameersbn/postgresql:10
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     - DEBUG=false
+
+  #     - DB_USER=
+  #     - DB_PASS=
+  #     - DB_NAME=
